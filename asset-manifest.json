@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/is-it-hot/static/css/main.ce205e60.chunk.css",
+    "main.js": "/is-it-hot/static/js/main.61b759a1.chunk.js",
+    "main.js.map": "/is-it-hot/static/js/main.61b759a1.chunk.js.map",
+    "runtime-main.js": "/is-it-hot/static/js/runtime-main.d3557eeb.js",
+    "runtime-main.js.map": "/is-it-hot/static/js/runtime-main.d3557eeb.js.map",
+    "static/css/2.c47c3995.chunk.css": "/is-it-hot/static/css/2.c47c3995.chunk.css",
+    "static/js/2.2d44960f.chunk.js": "/is-it-hot/static/js/2.2d44960f.chunk.js",
+    "static/js/2.2d44960f.chunk.js.map": "/is-it-hot/static/js/2.2d44960f.chunk.js.map",
+    "index.html": "/is-it-hot/index.html",
+    "precache-manifest.ca6f443be2d66015442c6d1182052d80.js": "/is-it-hot/precache-manifest.ca6f443be2d66015442c6d1182052d80.js",
+    "service-worker.js": "/is-it-hot/service-worker.js",
+    "static/css/2.c47c3995.chunk.css.map": "/is-it-hot/static/css/2.c47c3995.chunk.css.map",
+    "static/css/main.ce205e60.chunk.css.map": "/is-it-hot/static/css/main.ce205e60.chunk.css.map",
+    "static/js/2.2d44960f.chunk.js.LICENSE.txt": "/is-it-hot/static/js/2.2d44960f.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d3557eeb.js",
+    "static/css/2.c47c3995.chunk.css",
+    "static/js/2.2d44960f.chunk.js",
+    "static/css/main.ce205e60.chunk.css",
+    "static/js/main.61b759a1.chunk.js"
+  ]
+}
