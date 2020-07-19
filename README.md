@@ -13,6 +13,9 @@ Also Black Lives Matter.
 ## How It Works
 The app autodetects your IP and serves you with information on whether it's f*cking cold, hot, or okay to go outside. That's it. 
 
+<img src="https://github.com/VillyDevlioti/is-it-hot/blob/master/Screenshot%201.png" width="auto">
+<img src="https://github.com/VillyDevlioti/is-it-hot/blob/master/Screenshot%202.png" width="auto">
+
 ## Technologies Used
 
 - React
