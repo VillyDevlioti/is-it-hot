@@ -1,0 +1,23 @@
+.twitter-card {
+    width: auto;
+    height: 250px;
+    position: relative; 
+    overflow: hidden;
+    justify-content: space-between;
+    margin: 1% 2%;
+    padding: 0.15rem;
+}
+
+.weather-card-body{
+    padding: 1rem;
+    border-radius: inherit;
+    color: white;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.weather-card-body > h1 {
+    font-size: 88px;
+}

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Header from "./Components/Header/Header";
-//import TwitterCard from "./Components/TwitterCard/TwitterCard";
+import WeatherCard from "./Components/WeatherCard/WeatherCard";
 import Wrapper from "./Components/Wrapper/Wrapper";
 import './App.css';
 //import ReactWeather from 'react-open-weather';
@@ -13,7 +13,11 @@ class App extends Component {
     super(props);
     this.state = {
         temperature: "",
-        city:""
+        city:"", 
+        animation: "",
+        isHot: false,
+        isOK: false,
+        isCold: false
     };
   }
 
@@ -25,12 +29,10 @@ class App extends Component {
   findIP = () => {
     console.log(process.env.REACT_APP_IPSTACK_ACCESS_KEY)
     let IP_URL='http://api.ipstack.com/check?access_key='+process.env.REACT_APP_IPSTACK_ACCESS_KEY
-    console.log(IP_URL);
     axios.get(IP_URL)
       .then(res => {
         console.log("Axios IP", res.data)
         this.setState({city: res.data.city})
-        console.log("city is:", this.state.city)
         this.callWeatherAPI(this.state.city); 
       })
       .catch(error => {
@@ -40,23 +42,46 @@ class App extends Component {
 
   callWeatherAPI = city =>
   {
-    let URL = 'http://api.openweathermap.org/data/2.5/forecast?appid='+process.env.REACT_APP_OPENWEATHER_APPID+'&lang=en&units=metric&q='+city;
-    axios.get (URL)
+    let weather_URL = 'http://api.openweathermap.org/data/2.5/forecast?appid='+process.env.REACT_APP_OPENWEATHER_APPID+'&lang=en&units=metric&q='+city
+    axios.get(weather_URL)  
       .then(res => {
         console.log("Axios weather:", res.data)
+        this.contextualMessaging(res.data.list[0].main.temp)
       })
       .catch(error => {
         this.setState({error})
       });
   }
 
+  contextualMessaging = temp => {
+    if (temp>25)
+      this.setState({isHot: true, animation: "flash"})
+    else if (15<=temp<=25)
+      this.setState({isOK: true, animation: "tada"})
+    else if (temp<15)
+      this.setState({isCold: true, animation: "shakeX"})
+  }
+
   render() {
-    let variable = 30;
+    let card;
+    if (this.state.isHot)
+    {
+      card = <WeatherCard text="It's Fucking Hot" animation={this.state.animation}/>
+    }
+    else if (this.state.isOK)
+    {
+      card = <WeatherCard text="It's Fucking OK" animation={this.state.animation}/>
+    }
+    else if (this.state.isCold)
+    {
+      card = <WeatherCard text="It's Fucking Cold" animation={this.state.animation}/>
+    }
+
     return (
       <div className="App">
       <Wrapper>
         <Header />
-            <p>yo</p>
+            {card}
         </Wrapper>
     </div>
 
