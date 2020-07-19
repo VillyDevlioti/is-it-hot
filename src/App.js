@@ -29,7 +29,6 @@ class App extends Component {
 
   //this function autodetects IP and location
   findIP = () => {
-    console.log(process.env.REACT_APP_IPSTACK_ACCESS_KEY)
     let IP_URL='http://api.ipstack.com/check?access_key='+process.env.REACT_APP_IPSTACK_ACCESS_KEY
     axios.get(IP_URL)
       .then(res => {

@@ -24,3 +24,6 @@ The app autodetects your IP and serves you with information on whether it's f*ck
 
 - Display Precipitation Information
 - Change background based on temperature
+
+## Checkout my app at
+http://is-it-hot.herokuapp.com/
