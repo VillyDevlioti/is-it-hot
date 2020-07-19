@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from "./Components/Header/Header";
 import WeatherCard from "./Components/WeatherCard/WeatherCard";
 import Wrapper from "./Components/Wrapper/Wrapper";
+import Footer from "./Components/Footer/Footer";
 import './App.css';
 //import ReactWeather from 'react-open-weather';
 //Optional include of the default css styles
@@ -84,6 +85,7 @@ class App extends Component {
         <Header />
             {card}
         </Wrapper>
+        <Footer />
     </div>
 
     );

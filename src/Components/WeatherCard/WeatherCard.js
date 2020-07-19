@@ -3,7 +3,7 @@ import {Animated} from "react-animated-css";
 import "./WeatherCard.css";
 
 
-export default class TwitterCard extends Component {
+export default class WeatherCard extends Component {
     render () {
         let text = this.props.text;
         let animation = this.props.animation;

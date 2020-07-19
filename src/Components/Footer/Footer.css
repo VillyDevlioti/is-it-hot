@@ -1,0 +1,8 @@
+.footer {
+    width: auto;
+    position: relative; 
+    overflow: hidden;
+    justify-content: space-between;
+    color: white;
+    font-size: 18px;
+}
