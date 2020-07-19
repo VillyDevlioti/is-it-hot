@@ -71,11 +71,11 @@ class App extends Component {
     }
     else if (this.state.isOK)
     {
-      card = <WeatherCard text="It's Fucking OK" animation={this.state.animation}/>
+      card = <WeatherCard text="It's Fucking OK" animation={this.state.animation} city={this.state.city}/>
     }
     else if (this.state.isCold)
     {
-      card = <WeatherCard text="It's Fucking Cold" animation={this.state.animation}/>
+      card = <WeatherCard text="It's Fucking Cold" animation={this.state.animation} city={this.state.city}/>
     }
 
     return (
