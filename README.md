@@ -26,4 +26,4 @@ The app autodetects your IP and serves you with information on whether it's f*ck
 - Change background based on temperature
 
 ## Checkout my app at
-http://is-it-hot.herokuapp.com/
+<a href= "http://is-it-hot.herokuapp.com/" target="_blank">http://is-it-hot.herokuapp.com</a>
