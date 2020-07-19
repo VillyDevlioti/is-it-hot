@@ -9,8 +9,8 @@ import "./Footer.css";
                     <p>
                         App Developed by Villy Devlioti an amateur full stack developer</p>
                     <p>
-                        Checkout my <a href="https://github.com/VillyDevlioti" target="_blank">GitHub </a> 
-                        and <a href="https://fewl.agency" target="_blank">Company Website</a> 
+                        Checkout my <a href="https://github.com/VillyDevlioti" target="_blank" rel="noopener noreferrer">GitHub </a> 
+                        and <a href="https://fewl.agency" target="_blank" rel="noopener noreferrer" >Company Website</a> 
                     </p>
             </div>
         )

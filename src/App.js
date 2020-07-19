@@ -22,9 +22,9 @@ class App extends Component {
     };
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     //Initializing stuff
-    await this.findIP();
+    this.findIP();
   }
 
   //this function autodetects IP and location
@@ -32,13 +32,13 @@ class App extends Component {
     let IP_URL='http://api.ipstack.com/check?access_key='+process.env.REACT_APP_IPSTACK_ACCESS_KEY
     axios.get(IP_URL)
       .then(res => {
-        this.setState({city: res.data.city})
-        this.callWeatherAPI(this.state.city); 
+        this.setState({city: res.data.region_name})
+        this.callWeatherAPI(this.state.city);
       })
       .catch(error => {
         this.setState({error})
       })
-  }
+    }
 
   //this function finds weather information based on your location
   callWeatherAPI = city =>
