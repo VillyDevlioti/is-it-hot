@@ -26,12 +26,12 @@ class App extends Component {
     await this.findIP();
   }
 
+  //this function autodetects IP and location
   findIP = () => {
     console.log(process.env.REACT_APP_IPSTACK_ACCESS_KEY)
     let IP_URL='http://api.ipstack.com/check?access_key='+process.env.REACT_APP_IPSTACK_ACCESS_KEY
     axios.get(IP_URL)
       .then(res => {
-        console.log("Axios IP", res.data)
         this.setState({city: res.data.city})
         this.callWeatherAPI(this.state.city); 
       })
@@ -40,12 +40,12 @@ class App extends Component {
       })
   }
 
+  //this function finds weather information based on your location
   callWeatherAPI = city =>
   {
     let weather_URL = 'http://api.openweathermap.org/data/2.5/forecast?appid='+process.env.REACT_APP_OPENWEATHER_APPID+'&lang=en&units=metric&q='+city
     axios.get(weather_URL)  
       .then(res => {
-        console.log("Axios weather:", res.data)
         this.contextualMessaging(res.data.list[0].main.temp)
       })
       .catch(error => {
@@ -53,6 +53,7 @@ class App extends Component {
       });
   }
 
+  //this function defines weather if f*cking hot, cold or okay outside
   contextualMessaging = temp => {
     if (temp>25)
       this.setState({isHot: true, animation: "flash"})
